@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ relocation.start_of_working_date }}
+{% endblock %}
+
+
+{% block body %}
+<div class="container mt-5"></div>
+    <h1>{{ relocation.start_of_working_date }}</h1>
+
+    <div class="alert alert-info">
+        <p><b>Дата начала работы: {{ relocation.start_of_working_date }}</b> </p>
+        <p><b>Дата окончания работы: {{ relocation.end_of_working_date }}</b> </p>
+        <p><b>Название должности: {{ relocation.title_of_position }}</b> </p>
+        <a href="/relocation/{{ relocation.id }}/delete" class="btn btn-danger">Удалить</a>
+        <a href="/relocation/{{ relocation.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+{% endblock %}

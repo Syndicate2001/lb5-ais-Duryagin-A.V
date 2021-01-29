@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Страница для изменения сотрудника
+{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <h1>Изменение сотрудника</h1>
+    <form method="post">
+        <input type="text" name="FIO_of_employee" id="FIO_of_employee" class="form-control" value="{{ employee.FIO_of_employee }}" placeholder="Введите имя сотрудника"><br>
+        <input  type="text" name="age" id="age" class="form-control" value="{{ employee.age }}" placeholder="Введите возраст сотрудника"/><br>
+        <input type="text" name="sex" id="sex" class="form-control" value="{{ employee.sex }}" placeholder="Введите пол сотрудника"><br>
+        <input type="text" name="marital_status" id="marital_status" class="form-control" value="{{ employee.marital_status }}" placeholder="Введите семейное положение сотрудника"><br>
+        <input type="date" name="start_of_working_in_department_date" id="start_of_working_in_department_date" class="form-control" value="{{ employee.start_of_working_in_department_date }}" placeholder="Введите дату начала работы в подразделении"><br>
+        <input type="text" name="last_position" id="last_position" class="form-control" value="{{ employee.last_position }}" placeholder="Введите старую должность"><br>
+        <input type="text" name="rank" id="rank" class="form-control" value="{{ employee.rank }}" placeholder="Введите разряд сотрудника"><br>
+        <input type="date" name="end_of_working_in_department_date" id="end_of_working_in_department_date" class="form-control" value="{{ employee.end_of_working_in_department_date }}" placeholder="Введите дату завершения работы в подразделении"><br>
+        <input type="text" name="position" id="position" class="form-control" value="{{ employee.position }}" placeholder="Введите должность сотрудника"><br>
+        <input type="text" name="department" id="department" class="form-control" value="{{ employee.department }}" placeholder="Введите подразделение сотрудника"><br>
+
+        <p><input type="submit" value="Обновить" class="btn btn-success"/></p>
+
+    </form>
+</div>
+
+{% endblock %}

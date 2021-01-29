@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Должности
+{% endblock %}
+
+
+{% block body %}
+<div class="container mt-5">
+<h1>Должности</h1>
+    <a class="btn btn-primary" href="/create_position">Добавить должность</a>
+
+     {% if position|length > 0 %}
+        {% for elements in position %}
+            <div class="alert alert-info">
+                <h3>{{ elements.title_of_position }}</h3>
+                <a href="/position/{{ elements.id }}" class="btn btn-success">Детальнее</a>
+            </div>
+        {% endfor %}
+    {% else %}
+    <p>Еще не добавлено ни одна должность</p>
+    {% endif %}
+
+</div>
+{% endblock %}

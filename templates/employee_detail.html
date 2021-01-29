@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ employee.FIO_of_employee }}
+{% endblock %}
+
+
+{% block body %}
+<div class="container mt-5"></div>
+    <h1>{{ employee.FIO_of_employee }}</h1>
+
+    <div class="alert alert-info">
+        <p><b>ID сотрудника: {{ employee.id }}</b> </p>
+        <p><b>ФИО сотрудника: {{ employee.FIO_of_employee }}</b> </p>
+        <p><b>Возраст сотрудника: {{ employee.age }}</b> </p>
+        <p><b>Пол сотрудника: {{ employee.sex }}</b> </p>
+        <p><b>Семейное положение сотрудника: {{ employee.martial_status}}</b> </p>
+        <p><b>Дата начала работы в подразделении: {{ employee.start_of_working_in_department_date }}</b> </p>
+        <p><b>Старая должность: {{ employee.last_position }}</b> </p>
+        <p><b>Разряд: {{ employee.rank }}</b> </p>
+        <p><b>Дата завершения работы в подразделении: {{ employee.end_of_working_in_department_date }}</b> </p>
+        <p><b>Должность: {{ employee.position }}</b> </p>
+        <p><b>Подразделение: {{ employee.department }}</b> </p>
+        <a href="/employee/{{ employee.id }}/delete" class="btn btn-danger">Удалить</a>
+        <a href="/employee/{{ employee.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+{% endblock %}

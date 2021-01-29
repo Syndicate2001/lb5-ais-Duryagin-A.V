@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ department.name_of_department }}
+{% endblock %}
+
+
+{% block body %}
+<div class="container mt-5"></div>
+    <h1>{{ department.name_of_department }}</h1>
+
+    <div class="alert alert-info">
+        <p><b>Название подразделения: {{ department.name_of_department }}</b> </p>
+        <p><b>Управляющий подразделением: {{ department.head_of_department }}</b> </p>
+        <a href="/department/{{ department.id }}/delete" class="btn btn-danger">Удалить</a>
+        <a href="/department/{{ department.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+{% endblock %}

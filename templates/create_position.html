@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Страница для создания должностей
+{% endblock %}
+
+{% block body %}
+
+<div class="container nt-5">
+    <h1>Добавление должностей</h1>
+    <form method="post">
+        <input type="number" name="id" id="id" class="form-control" placeholder="Введите id должности"><br>
+        <input type="text" name="title_of_position" id="title_of_position" class="form-control" placeholder="Введите название должности"><br>
+        <input type="text" name="short_title" id="short_title" class="form-control" placeholder="Краткое название"><br>
+        <input type="number" name="cipher" id="cipher" class="form-control" placeholder="Шифр"><br>
+        <input type="number" name="low_border" id="low_border" class="form-control" placeholder="Нижняя граница"><br>
+        <input type="number" name="high_border" id="high_border" class="form-control" placeholder="Верхняя граница"><br>
+
+        <p><input type="submit" value="Отправить" class="btn btn-success"></p>
+
+    </form>
+</div>
+
+{% endblock %}

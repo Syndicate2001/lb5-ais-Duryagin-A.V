@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Страница для изменения предприятия
+{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <h1>Изменение предприятия</h1>
+    <form method="post">
+        <input type="text" name="name_of_company" id="name_of_company" class="form-control" value="{{ company.name_of_company }}" placeholder="Введите название предприятия"><br>
+        <input  type="text" name="adress_of_company" id="adress_of_company" class="form-control" value="{{ company.adress_of_company }}" placeholder="Введите адрес предприятия"/><br>
+        <input type="text" name="head_of_company" id="head_of_company" class="form-control" value="{{ company.head_of_company }}" placeholder="Введите управляющего предприятием"><br>
+
+        <p><input type="submit" value="Обновить" class="btn btn-success"/></p>
+
+    </form>
+</div>
+
+{% endblock %}

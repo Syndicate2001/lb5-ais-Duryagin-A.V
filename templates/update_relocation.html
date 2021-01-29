@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Страница для изменения перемещения сотрудников
+{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <h1>Изменение перемещения сотрудников</h1>
+    <form method="post">
+        <input type="date" name="start_of_working_date" id="start_of_working_date" class="form-control" value="{{ relocation.start_of_working_date }}" placeholder="Введите дату начала работы"><br>
+        <input type="date" name="end_of_working_date" id="end_of_working_date" class="form-control" value="{{ relocation.end_of_working_date }}" placeholder="Введите дату окончания работы"><br>
+        <input type="date" name="title_of_position" id="title_of_position" class="form-control" value="{{ title_of_position}}" placeholder="Название должности"><br>
+
+        <p><input type="submit" value="Обновить" class="btn btn-success"/></p>
+
+    </form>
+</div>
+
+{% endblock %}

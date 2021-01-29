@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Страница для создания перемещения сотрудников
+{% endblock %}
+
+{% block body %}
+
+<div class="container nt-5">
+    <h1>Добавление перемещения сотрудников</h1>
+    <form method="post">
+        <input type="date" name="start_of_working_date" id="start_of_working_date" class="form-control" placeholder="Введите дату начала работы"><br>
+        <input type="date" name="end_of_working_date" id="end_of_working_date" class="form-control" placeholder="Введите дату окончания работы"><br>
+        <input type="date" name="title_of_position" id="title_of_position" class="form-control" placeholder="Название должности"><br>
+
+        <p><input type="submit" value="Отправить" class="btn btn-success"></p>
+
+    </form>
+</div>
+
+{% endblock %}

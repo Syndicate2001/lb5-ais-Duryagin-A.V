@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ position.title_of_position }}
+{% endblock %}
+
+
+{% block body %}
+<div class="container mt-5"></div>
+    <h1>{{ position.title_of_position }}</h1>
+
+    <div class="alert alert-info">
+        <p><b>ID должности: {{ position.id }}</b> </p>
+        <p><b>Название должности: {{ position.title_of_position }}</b> </p>
+        <p><b>Краткое название: {{ position.short_title }}</b> </p>
+        <p><b>Шифр: {{ position.cipher }}</b> </p>
+        <p><b>Нижняя граница: {{ position.low_border }}</b> </p>
+        <p><b>Верхняя граница: {{ position.high_border }}</b> </p>
+        <a href="/position/{{ position.id }}/delete" class="btn btn-danger">Удалить</a>
+        <a href="/position/{{ position.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+{% endblock %}

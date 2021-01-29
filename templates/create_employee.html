@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Страница для создания сотрудника
+{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <h1>Добавление сотрудника</h1>
+    <form method="post">
+        <input type="text" name="FIO_of_employee" id="FIO_of_employee" class="form-control"  placeholder="Введите имя сотрудника"><br>
+        <input  type="text" name="age" id="age" class="form-control"  placeholder="Введите возраст сотрудника"/><br>
+        <input type="text" name="sex" id="sex" class="form-control"  placeholder="Введите пол сотрудника"><br>
+        <input type="text" name="marital_status" id="marital_status" class="form-control"  placeholder="Введите семейное положение сотрудника"><br>
+        <input type="date" name="start_of_working_in_department_date" id="start_of_working_in_department_date" class="form-control"  placeholder="Введите дату начала работы в подразделении"><br>
+        <input type="text" name="last_position" id="last_position" class="form-control"  placeholder="Введите старую должность"><br>
+        <input type="text" name="rank" id="rank" class="form-control"  placeholder="Введите разряд сотрудника"><br>
+        <input type="date" name="end_of_working_in_department_date" id="end_of_working_in_department_date" class="form-control"  placeholder="Введите дату завершения работы в подразделении"><br>
+        <input type="text" name="position" id="position" class="form-control"  placeholder="Введите должность сотрудника"><br>
+        <input type="text" name="department" id="department" class="form-control"  placeholder="Введите подразделение сотрудника"><br>
+
+        <p><input type="submit" value="Отправить" class="btn btn-success"/></p>
+
+    </form>
+</div>
+
+{% endblock %}

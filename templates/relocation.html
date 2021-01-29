@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Перемещение сотрудников
+{% endblock %}
+
+
+{% block body %}
+<div class="container mt-5">
+<h1>Перемещение сотрудников</h1>
+    <a class="btn btn-primary" href="/create_relocation">Добавить перемещение сотрудников</a>
+
+     {% if relocation|length > 0 %}
+        {% for elements in relocation %}
+            <div class="alert alert-info">
+                <h3>{{ elements.start_of_working_date }}</h3>
+                <a href="/relocation/{{ elements.id }}" class="btn btn-success">Детальнее</a>
+            </div>
+        {% endfor %}
+    {% else %}
+    <p>Еще не добавлено ни одно перемещение сотрудников</p>
+    {% endif %}
+
+</div>
+{% endblock %}

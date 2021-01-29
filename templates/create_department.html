@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Страница для создания подразделения
+{% endblock %}
+
+{% block body %}
+
+<div class="container nt-5">
+    <h1>Добавление подразделения</h1>
+    <form method="post">
+        <input type="text" name="name_of_department" id="name_of_department" class="form-control" placeholder="Введите название подразделения"><br>
+        <input type="text" name="head_of_department" id="head_of_department" class="form-control" placeholder="Введите управляющего подразделением "><br>
+
+        <p><input type="submit" value="Отправить" class="btn btn-success"/></p>
+
+    </form>
+</div>
+
+{% endblock %}
